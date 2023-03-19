@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".BasketFragment">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/Pizza_Basket"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/pizza_main_screen"/>
+
+        <ImageView
+            android:id="@+id/Sushi_Basket"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/sushi_main_screen"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp" />
+
+        <TextView
+            android:id="@+id/Name_Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="71dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="39dp"
+            android:layout_toStartOf="@+id/Sushi_Basket"
+            android:layout_toEndOf="@+id/Pizza_Basket"
+            android:fontFamily="monospace"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/in_sp20"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/Menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/menu_list" />
+
+        <ImageButton
+            android:id="@+id/Profile_icon_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/profile_icon" />
+
+        <ImageButton
+            android:id="@+id/Basket_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/basket" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:fontFamily="monospace"
+        android:text="Уведомление"
+        android:textColor="@color/white"
+        android:textSize="@dimen/in_sp14"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/RelativeLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RelativeLayout5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

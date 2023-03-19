@@ -1,0 +1,21 @@
+<resources>
+    <!--  -->
+    <string name="app_name">Pizza and Sushi</string>
+    <string name="Info">Доставка суши и пиццы — онлайн сервис заказа суши и пиццы в Москве.</string>
+    <string name="Time">Время приема заказов: с 9:00 до 23:00</string>
+    <string name="Telephone">Телефон\n+7 (977) 927–83–40</string>
+    <string name="Menu">Открыть меню</string>
+    <string name="Profile">Профиль</string>
+    <string name="Registration">Корзина</string>
+
+    <string name="Name">Имя</string>
+    <string name="Surname">Фамилия</string>
+    <string name="Phone">Телефон</string>
+    <string name="Email">E-mail</string>
+    <string name="Registration_button">Войти</string>
+
+    <string name="Enter_profile">Вы вошли в профиль</string>
+    <string name="Empty_fields">Заполните все поля</string>
+
+
+</resources>

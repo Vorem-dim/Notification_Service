@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".MenuFragment">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/Pizza_Menu"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/pizza_main_screen"/>
+
+        <ImageView
+            android:id="@+id/Sushi_Menu"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/sushi_main_screen"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp" />
+
+        <TextView
+            android:id="@+id/Name_Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="71dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="39dp"
+            android:layout_toStartOf="@+id/Sushi_Menu"
+            android:layout_toEndOf="@+id/Pizza_Menu"
+            android:fontFamily="monospace"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/in_sp20"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/Menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/menu_list" />
+
+        <ImageButton
+            android:id="@+id/Profile_icon_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/profile_icon" />
+
+        <ImageButton
+            android:id="@+id/Basket_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/basket" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerCuisine"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RelativeLayout3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerMenu"
+        android:layout_width="409dp"
+        android:layout_height="409dp"
+        app:layout_constraintBottom_toTopOf="@+id/RelativeLayout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RecyclerCuisine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
