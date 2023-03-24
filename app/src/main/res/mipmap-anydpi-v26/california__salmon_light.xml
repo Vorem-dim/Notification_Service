@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/california__salmon_light_background"/>
+    <foreground android:drawable="@mipmap/california__salmon_light_foreground"/>
+</adaptive-icon>

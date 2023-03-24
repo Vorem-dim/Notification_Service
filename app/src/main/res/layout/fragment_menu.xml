@@ -95,7 +95,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerCuisine"
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,9 +103,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerMenu"
-        android:layout_width="409dp"
-        android:layout_height="409dp"
+        android:layout_width="fill_parent"
+        android:layout_height="361dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/RelativeLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RecyclerCuisine" />
 

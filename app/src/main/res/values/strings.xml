@@ -1,5 +1,5 @@
 <resources>
-    <!--  -->
+    <!-- Main Screen -->
     <string name="app_name">Pizza and Sushi</string>
     <string name="Info">Доставка суши и пиццы — онлайн сервис заказа суши и пиццы в Москве.</string>
     <string name="Time">Время приема заказов: с 9:00 до 23:00</string>
@@ -7,15 +7,128 @@
     <string name="Menu">Открыть меню</string>
     <string name="Profile">Профиль</string>
     <string name="Registration">Корзина</string>
-
+    <!-- Registration -->
     <string name="Name">Имя</string>
     <string name="Surname">Фамилия</string>
     <string name="Phone">Телефон</string>
     <string name="Email">E-mail</string>
     <string name="Registration_button">Войти</string>
-
-    <string name="Enter_profile">Вы вошли в профиль</string>
     <string name="Empty_fields">Заполните все поля</string>
+    <!-- Profile -->
+    <string name="Enter_profile">Вы вошли в профиль</string>
+    <!-- Menu -->
+    <string name="japan_cuisine">Японская кухня</string>
+    <string name="italian_cuisine">Итальянская кухня</string>
+    <string name="salad">Салаты</string>
+    <string name="desserts">Десерты</string>
+    <string name="drinks">Напитки</string>
+        <!-- Japan position -->
+            <!-- Sushi -->
+    <string name="Title_chuka">Чука</string>
+    <string name="Title_crab_spice">Краб спайс</string>
+    <string name="Title_eel_spice">Угорь спайс</string>
+    <string name="Title_flying_fish_caviar">Икра летучей рыбы</string>
+    <string name="Title_salmon_spice">Лосось спайс</string>
+    <string name="Title_scallop_spice">Гребешок спайс</string>
+    <string name="Title_shrimp_spice">Креветка спайс</string>
+    <string name="Title_sushi_eel">Суши с угрем</string>
+    <string name="Title_sushi_salmon">Суши с лососем</string>
+    <string name="Title_sushi_shrimp">Суши с креветкой</string>
+    <string name="Title_sushi_smoked_salmon">Суши с копченым лососем</string>
+    <string name="Title_sushi_tuna">Суши с тунцом</string>
+    <string name="Title_tuna_spice">Тунец спайс</string>
+    <string name="Title_red_caviar">Красная икра</string>
+            <!-- Rolls -->
+    <string name="Title_rolls_cucumber">Ролл с огурцом</string>
+    <string name="Title_rolls_avocado">Ролл с авокадо</string>
+    <string name="Title_rolls_tuna">Ролл с тунцом</string>
+    <string name="Title_rolls_eel">Ролл с угрем</string>
+    <string name="Title_rolls_salmon">Ролл с лососем</string>
+    <string name="Title_Yumiko">Юмико</string>
+    <string name="Title_Ozu">Одзу</string>
+    <string name="Title_california_light">Калифорния лайт</string>
+    <string name="Title_california">Калифорния</string>
+    <string name="Title_california_dream">Калифорния дрим</string>
+    <string name="Title_california_salmon">Калифорния с лососем</string>
+    <string name="Title_california_salmon_light">Калифорния с лососем лайт</string>
+    <string name="Title_california_eel">Калифорния с угрем</string>
+    <string name="Title_dragon_light">Дракон лайт</string>
+    <string name="Title_mexican">Мексиканский</string>
+    <string name="Title_dragon">Дракон</string>
+    <string name="Title_prime_light">Прайм лайт</string>
+    <string name="Title_prime">Прайм</string>
+    <string name="Title_philadelphia_light">Филадельфия лайт</string>
+    <string name="Title_philadelphia">Филадельфия</string>
+    <string name="rolls_cucumber">Огурец, рис, нори, 6 шт.</string>
+    <string name="rolls_avocado">Авокадо, рис, нори, 6 шт.</string>
+    <string name="rolls_tuna">Тунец, рис, нори, 6 шт.</string>
+    <string name="rolls_eel">Угорь, рис, нори, 6 шт.</string>
+    <string name="rolls_salmon">Лосось, рис, нори, 6 шт.</string>
+    <string name="Yumiko">Микс лосося и креветок, угорь, авокадо, салат, соусы спайс и унаги, кунжут, рис, нори, 8 шт.</string>
+    <string name="Ozu">Лосось, тунец, авокадо, тобико, салат, зеленый лук, соусы «Нисуаз», спайс и унаги, рис, нори, 8 шт.</string>
+    <string name="california_light">Краб-микс, авокадо, огурец, тобико, кунжут, рис, нори, 6 шт.</string>
+    <string name="california">Краб-микс, авокадо, огурец, тобико, рис, нори, 6 шт.</string>
+    <string name="california_dream">Креветка, авокадо, снежный краб, сыр, соусы спайс и юдзу с майонезом, тобико, кунжут, лук зеленый, рис, нори, 6 шт.</string>
+    <string name="california_salmon">Лосось, авокадо, огурец, тобико, рис, нори, 6 шт.</string>
+    <string name="california_salmon_light">Лосось, авокадо, огурец, тобико, кунжут, рис, нори, 6 шт.</string>
+    <string name="california_eel">Угорь, икра тобико черная, авокадо, огурцы, кунжут, стружка тунца, рис, нори, 6 шт.</string>
+    <string name="dragon_light">Угорь, авокадо, сыр, икра тобико, лук зеленый, стружка тунца, кунжут, рис, нори, 6 шт.</string>
+    <string name="mexican">Креветка темпура, огурец, тобико, рис нори, 6 шт.</string>
+    <string name="dragon">Угорь, авокадо, нежный сыр, тобико, кунжут, зеленый лук, стружка тунца, 6 шт.</string>
+    <string name="prime_light">Лосось, креветки, огурцы, кунжут, рис, нори, 6 шт.</string>
+    <string name="prime">Лосось, креветка темпура, огурец, тобико, рис, нори, 6 шт.</string>
+    <string name="philadelphia_light">Лосось, сыр, авокадо, огурцы, кунжут, рис, нори, 6 шт.</string>
+    <string name="philadelphia">Лосось, огурец, авокадо, кунжут, сыр, зеленый лук, рис, нори, 6 шт.</string>
+        <!-- Italian position -->
 
+        <!-- Salad position -->
+    <string name="Title_caesar_with_chicken">Цезарь с курицей</string>
+    <string name="Title_caesar_with_shrimp">Цезарь с креветкой</string>
+    <string name="Title_chuka_with_nut_sauce">Чука с ореховым соусом</string>
+    <string name="Title_kumotory">Кумотори</string>
+    <string name="Title_sendai">Сендай</string>
+    <string name="Title_keiko">Кейко</string>
+    <string name="Title_toruko">Торуко</string>
+    <string name="Title_akarui">Акаруи</string>
+    <string name="Title_nicoise">Нисуаз</string>
+    <string name="Title_shinshiro">Синсиро</string>
+    <string name="Title_greek_salad">Греческий салат</string>
+    <string name="Title_green_salad_with_edamame_and_mozzarella">Салат с эдамаме и моцареллой</string>
+    <string name="Title_salmon_salad">Салат с лососем</string>
+    <string name="caesar_with_chicken">Курица, сыр, салат романо, салат айсберг, перепелиное яйцо, гренки, соус «Цезарь»</string>
+    <string name="caesar_with_shrimp">Креветки, сыр, салат романо, салат айсберг, перепелиное яйцо, гренки, соус «Цезарь»</string>
+    <string name="chuka_with_nut_sauce">Чука, ореховый соус</string>
+    <string name="kumotori">Креветки, листья салата, авокадо, томаты, гренки, соусы «Унаги» и «Нисуаз»</string>
+    <string name="sendai">Креветки, листья салата, тобико, пикантный соус</string>
+    <string name="keiko">Креветка, краб-микс, авокадо, манго, салатный микс, кунжут, трюфельный соус, кинза, микс соусов</string>
+    <string name="toruko">Пастрами из индейки, огурец, маринованные томаты, микс салатных листьев, пармезан, кунжут, фирменный соус</string>
+    <string name="akarui">Кукуруза, микс салатных листьев, болгарский перец, огурец, лук, кинза, пикантный соус, зеленое масло</string>
+    <string name="nicoise">Тунец, мини-картофель, томаты, авокадо, салатный микс, огурцы, перепелиное яйцо, кунжут, соус «Нисуаз»</string>
+    <string name="shinshiro">Кальмар, креветка, салатный микс, томаты черри, чипсы из пармезана, фирменная заправка, кунжут</string>
+    <string name="greek_salad">Спелые томаты, листья салата, сладкий перец, огурцы, красный лук, оливки и сыр фета. Заправляется оливковым маслом и бальзамиком</string>
+    <string name="green_salad_with_edamame_and_mozzarella">Свежий шпинат, бобы эдамаме, брокколи, кабачки, огурцы и моцарелла под соусом из маракуйи</string>
+    <string name="salmon_salad">Салат с подкопчённым лососем, руколой, свежими огурцами, творожным сыром с капелькой трюфельного масла и соусом из маракуйи</string>
+        <!-- Dessert position -->
+    <string name="Title_fruit_roll">Фруктовый ролл</string>
+    <string name="Title_chocolate_roll">Шоколадный ролл</string>
+    <string name="Title_kuro_eru">Куро ёру</string>
+    <string name="Title_manila_roll">Манила ролл</string>
+    <string name="Title_roku_san">Року сан</string>
+    <string name="Title_amai_miru">Амаи миру</string>
+    <string name="Title_cheesecake">Чизкейк</string>
+    <string name="Title_tiramisu">Тирамису</string>
+    <string name="Title_medovik">Медовик</string>
+    <string name="Title_red_velvet">Красный бархат</string>
+    <string name="fruit_roll">Ананас, киви, сырный крем, малиновый соус, 4 шт.</string>
+    <string name="chocolate_roll">Ананас, киви, клубника, банан, миндаль, сырный крем, шоколадный соус, 4 шт.</string>
+    <string name="kuro_eru">Киви, ананас, клубника, банан, миндаль и сырный крем, 4 шт.</string>
+    <string name="manila_roll">Ананас, киви, сырный крем и малиновый соус, 4 шт.</string>
+    <string name="roku_san">Безе, сливочный крем, клубника, киви, ананас, пюре маракуйя и манго, миндаль, мята</string>
+    <string name="amai_miru">Сыр маскарпоне, клубника, малина, мандарин, печенье и грецкий орех</string>
+    <string name="cheesecake">Классический творожный десерт на основе из песочного теста. Творожный сыр, яйцо, сахар, масло сливочное, мука</string>
+    <string name="tiramisu">Классический итальянский десерт. Кофейный бисквит, маскарпоне, сливки, печенье савоярди, пропитка из эспрессо и ликера амаретто, какао пудра</string>
+    <string name="medovik">Бисквитно-мёдовый торт, пропитанный сметанным кремом. Мёдовый бисквит, крем сметанный, вафельная крошка</string>
+    <string name="red_velvet">Бисквит из вишни с изюмом, пропитанный сливочный кремом. Вишневые коржи, крем сливочный (ваниль, сливки, сметана), изюм</string>
+        <!-- Drinks position -->
 
 </resources>
