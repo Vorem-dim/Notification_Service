@@ -1,4 +1,4 @@
-package com.example.pizzaandsushi;
+package com.example.pizzaandsushi.Model;
 
 public class PositionField {
     private int image;

@@ -1,20 +1,20 @@
-package com.example.pizzaandsushi;
+package com.example.pizzaandsushi.UI;
 
-import android.icu.text.Transliterator;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.text.FieldPosition;
+import com.example.pizzaandsushi.Model.MenuField;
+import com.example.pizzaandsushi.Model.PositionField;
+import com.example.pizzaandsushi.R;
+import com.example.pizzaandsushi.RecyclerMenu;
+import com.example.pizzaandsushi.RecyclerPosition;
+
 import java.util.ArrayList;
 
 public class MenuFragment extends Fragment {

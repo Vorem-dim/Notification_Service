@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/orange"
-    tools:context=".BasketFragment">
+    tools:context=".UI.BasketFragment">
 
     <RelativeLayout
         android:id="@+id/RelativeLayout5"
@@ -91,22 +91,5 @@
             android:src="@drawable/basket" />
 
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/black"
-        android:fontFamily="monospace"
-        android:text="Уведомление"
-        android:textColor="@color/white"
-        android:textSize="@dimen/in_sp14"
-        android:textStyle="bold"
-        android:typeface="monospace"
-        app:layout_constraintBottom_toTopOf="@+id/RelativeLayout6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RelativeLayout5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

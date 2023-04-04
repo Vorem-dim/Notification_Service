@@ -1,4 +1,4 @@
-package com.example.pizzaandsushi;
+package com.example.pizzaandsushi.UI;
 
 import android.os.Bundle;
 
@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.pizzaandsushi.R;
+import com.example.pizzaandsushi.UI.ProfileFragment;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class RegistrationFragment extends Fragment {

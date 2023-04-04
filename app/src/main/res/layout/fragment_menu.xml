@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/orange"
-    tools:context=".MenuFragment">
+    tools:context=".UI.MenuFragment">
 
     <RelativeLayout
         android:id="@+id/RelativeLayout3"

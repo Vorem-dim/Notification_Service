@@ -1,4 +1,4 @@
-package com.example.pizzaandsushi;
+package com.example.pizzaandsushi.UI;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +7,8 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.pizzaandsushi.R;
 
 public class MainFragment extends Fragment {
 

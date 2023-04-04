@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.pizzaandsushi.Model.PositionField;
+
 import java.util.List;
 
 public class RecyclerPosition extends RecyclerView.Adapter<RecyclerPosition.ViewHolder> {
@@ -18,7 +20,7 @@ public class RecyclerPosition extends RecyclerView.Adapter<RecyclerPosition.View
     private final RecyclerPosition.OnClickListener Listener;
     private final List<PositionField> positionField;
 
-    interface OnClickListener {
+    public interface OnClickListener {
         void OnClick(PositionField field, int position);
     }
 

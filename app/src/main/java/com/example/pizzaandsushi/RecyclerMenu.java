@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.pizzaandsushi.Model.MenuField;
+
 import java.util.List;
 
 public class RecyclerMenu extends RecyclerView.Adapter<RecyclerMenu.ViewHolder> {
@@ -18,7 +20,7 @@ public class RecyclerMenu extends RecyclerView.Adapter<RecyclerMenu.ViewHolder> 
     private final RecyclerMenu.OnClickListener Listener;
     private final List<MenuField> menuField;
 
-    interface OnClickListener {
+    public interface OnClickListener {
         void OnClick(MenuField field, int position);
     }
 
