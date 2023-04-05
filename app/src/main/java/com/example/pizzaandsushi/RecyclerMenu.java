@@ -13,19 +13,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pizzaandsushi.Model.MenuField;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerMenu extends RecyclerView.Adapter<RecyclerMenu.ViewHolder> {
     private final LayoutInflater inflater;
     private final RecyclerMenu.OnClickListener Listener;
-    private final List<MenuField> menuField;
+    private List<MenuField> menuField;
 
     public interface OnClickListener {
         void OnClick(MenuField field, int position);
     }
 
-    public RecyclerMenu(Context context, List<MenuField> field, RecyclerMenu.OnClickListener listener) {
-        this.menuField = field;
+    public RecyclerMenu(Context context, RecyclerMenu.OnClickListener listener) {
+        this.menuField = new ArrayList<>();
         this.Listener = listener;
         this.inflater = LayoutInflater.from(context);
     }
@@ -46,6 +47,13 @@ public class RecyclerMenu extends RecyclerView.Adapter<RecyclerMenu.ViewHolder> 
                 Listener.OnClick(field, position);
             }
         });
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void update(final List<MenuField> menu) {
+        this.menuField.clear();
+        this.menuField = menu;
+        notifyDataSetChanged();
     }
 
     @Override

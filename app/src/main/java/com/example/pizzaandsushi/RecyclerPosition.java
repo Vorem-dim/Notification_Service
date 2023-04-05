@@ -13,21 +13,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pizzaandsushi.Model.PositionField;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerPosition extends RecyclerView.Adapter<RecyclerPosition.ViewHolder> {
     private final LayoutInflater inflater;
     private final RecyclerPosition.OnClickListener Listener;
-    private final List<PositionField> positionField;
+    private List<PositionField> positionField;
+    private int index;
 
     public interface OnClickListener {
         void OnClick(PositionField field, int position);
     }
 
-    public RecyclerPosition(Context context, List<PositionField> field, RecyclerPosition.OnClickListener listener) {
-        this.positionField = field;
+    public RecyclerPosition(Context context, RecyclerPosition.OnClickListener listener) {
+        this.positionField = new ArrayList<>();
         this.Listener = listener;
         this.inflater = LayoutInflater.from(context);
+        this.index = 0;
     }
 
     public RecyclerPosition.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -47,6 +50,17 @@ public class RecyclerPosition extends RecyclerView.Adapter<RecyclerPosition.View
                 Listener.OnClick(field, position);
             }
         });
+    }
+
+    public void ChangeIndex(int position) {
+        this.index = position;
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void update(ArrayList<ArrayList<PositionField>> position) {
+        this.positionField.clear();
+        this.positionField = position.get(index);
+        notifyDataSetChanged();
     }
 
     @Override
