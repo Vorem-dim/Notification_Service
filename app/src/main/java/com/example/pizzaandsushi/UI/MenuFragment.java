@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pizzaandsushi.Model.MenuField;
@@ -58,19 +59,14 @@ public class MenuFragment extends Fragment {
         ListPosition.setAdapter(adapter_position);
         menuViewPattern.position.observe(getViewLifecycleOwner(), adapter_position::update);
 
-        ImageButton button1 = view.findViewById(R.id.Menu_button);
+        ImageButton button1 = view.findViewById(R.id.Profile_icon_button);
         button1.setOnClickListener(v -> {
-            getParentFragmentManager().beginTransaction().replace(R.id.FragmentContainerView, MenuFragment.class, null).commit();
+            Navigation.findNavController(view).navigate(R.id.action_MenuToRegistration);
         });
 
-        ImageButton button2 = view.findViewById(R.id.Profile_icon_button);
+        ImageButton button2 = view.findViewById(R.id.Basket_button);
         button2.setOnClickListener(v -> {
-            getParentFragmentManager().beginTransaction().replace(R.id.FragmentContainerView, ProfileFragment.class, null).commit();
-        });
-
-        ImageButton button3 = view.findViewById(R.id.Basket_button);
-        button3.setOnClickListener(v -> {
-            getParentFragmentManager().beginTransaction().replace(R.id.FragmentContainerView, BasketFragment.class, null).commit();
+            Navigation.findNavController(view).navigate(R.id.action_MenuToBasket);
         });
     }
 }

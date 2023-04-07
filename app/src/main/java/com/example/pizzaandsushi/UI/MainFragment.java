@@ -7,6 +7,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.example.pizzaandsushi.R;
 
@@ -24,7 +25,7 @@ public class MainFragment extends Fragment {
         button_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getParentFragmentManager().beginTransaction().replace(R.id.FragmentContainerView, MenuFragment.class, null).commit();
+                Navigation.findNavController(view).navigate(R.id.action_MainToMenu);
             }
         });
 
@@ -32,7 +33,7 @@ public class MainFragment extends Fragment {
         button_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getParentFragmentManager().beginTransaction().replace(R.id.FragmentContainerView, RegistrationFragment.class, null).commit();
+                Navigation.findNavController(view).navigate(R.id.action_MainToRegistration);
             }
         });
 
@@ -40,7 +41,7 @@ public class MainFragment extends Fragment {
         button_basket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getParentFragmentManager().beginTransaction().replace(R.id.FragmentContainerView, BasketFragment.class, null).commit();
+                Navigation.findNavController(view).navigate(R.id.action_MainToBasket);
             }
         });
     }

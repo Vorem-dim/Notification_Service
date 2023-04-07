@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:startDestination="@+id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.pizzaandsushi.UI.MainFragment"
+        android:label="Blank"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_MainToMenu"
+            app:destination="@+id/MenuFragment" />
+        <action
+            android:id="@+id/action_MainToRegistration"
+            app:destination="@+id/RegistrationFragment" />
+        <action
+            android:id="@+id/action_MainToBasket"
+            app:destination="@+id/BasketFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MenuFragment"
+        android:name="com.example.pizzaandsushi.UI.MenuFragment"
+        android:label="Blank"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_MenuToBasket"
+            app:destination="@+id/BasketFragment" />
+        <action
+            android:id="@+id/action_MenuToRegistration"
+            app:destination="@+id/RegistrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/BasketFragment"
+        android:name="com.example.pizzaandsushi.UI.BasketFragment"
+        android:label="Blank"
+        tools:layout="@layout/fragment_basket">
+        <action
+            android:id="@+id/action_BasketToMenu"
+            app:destination="@+id/MenuFragment" />
+        <action
+            android:id="@+id/action_BasketToRegistration"
+            app:destination="@+id/RegistrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.pizzaandsushi.UI.ProfileFragment"
+        android:label="Blank"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_ProfileToMenu"
+            app:destination="@+id/MenuFragment" />
+        <action
+            android:id="@+id/action_ProfileToRegistration"
+            app:destination="@+id/RegistrationFragment" />
+        <action
+            android:id="@+id/action_ProfileToBasket"
+            app:destination="@+id/BasketFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RegistrationFragment"
+        android:name="com.example.pizzaandsushi.UI.RegistrationFragment"
+        android:label="Blank"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_RegistrationToProfile"
+            app:destination="@+id/ProfileFragment" />
+    </fragment>
+</navigation>
