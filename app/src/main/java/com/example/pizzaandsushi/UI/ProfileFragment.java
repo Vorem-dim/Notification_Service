@@ -13,11 +13,15 @@ import androidx.navigation.Navigation;
 
 import com.example.pizzaandsushi.R;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+
 public class ProfileFragment extends Fragment {
-    private String Name;
-    private String Email;
-    private String Surname;
-    private String Telephone;
+    String filename = "User";
 
     public ProfileFragment() {
         super(R.layout.fragment_profile);
@@ -28,18 +32,32 @@ public class ProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Toast.makeText(getContext(), R.string.Enter_profile, Toast.LENGTH_LONG).show();
-        Name = getArguments().getString("Name");
-        Email = getArguments().getString("Email");
-        Surname = getArguments().getString("Surname");
-        Telephone = getArguments().getString("Telephone");
-        TextView text = view.findViewById(R.id.NameProfile);
-        text.setText(getString(R.string.Name) + ": " + Name);
-        text = view.findViewById(R.id.SurnameProfile);
-        text.setText(getString(R.string.Surname) + ": " + Surname);
-        text = view.findViewById(R.id.EmailProfile);
-        text.setText(getString(R.string.Email) + ": " + Email);
-        text = view.findViewById(R.id.TelephoneProfile);
-        text.setText(getString(R.string.Phone) + ": " + Telephone);
+
+        FileInputStream fis;
+        String Data[];
+        try {
+            fis = getContext().openFileInput(filename);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        InputStreamReader inputStreamReader = new InputStreamReader(fis, StandardCharsets.UTF_8);
+        BufferedReader reader = new BufferedReader(inputStreamReader);
+        StringBuilder stringBuilder = new StringBuilder();
+        try {
+            String line = reader.readLine();
+            while (line != null) {
+                stringBuilder.append(line).append('\n');
+                line = reader.readLine();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            Data = stringBuilder.toString().split("\n");
+        }
+        ((TextView)view.findViewById(R.id.NameProfile)).setText(getString(R.string.Name) + ": " + Data[0]);
+        ((TextView)view.findViewById(R.id.SurnameProfile)).setText(getString(R.string.Surname) + ": " + Data[1]);
+        ((TextView)view.findViewById(R.id.EmailProfile)).setText(getString(R.string.Email) + ": " + Data[2]);
+        ((TextView)view.findViewById(R.id.TelephoneProfile)).setText(getString(R.string.Phone) + ": " + Data[3]);
 
         ImageButton button1 = view.findViewById(R.id.Menu_button);
         button1.setOnClickListener(v -> {

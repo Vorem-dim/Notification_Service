@@ -1,7 +1,6 @@
 package com.example.pizzaandsushi.ViewModels;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
@@ -14,11 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressLint("NotConstructor")
-public class MenuViewPattern extends ViewModel {
+public class ViewPattern extends ViewModel {
     public LiveData<List<MenuField>> menu;
     public LiveData<ArrayList<ArrayList<PositionField>>> position;
 
-    public MenuViewPattern() {
+    public ViewPattern() {
         MenuViewPattern();
         PositionViewPattern();
     }

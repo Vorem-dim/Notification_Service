@@ -16,10 +16,10 @@ import com.example.pizzaandsushi.Model.PositionField;
 import com.example.pizzaandsushi.R;
 import com.example.pizzaandsushi.RecyclerMenu;
 import com.example.pizzaandsushi.RecyclerPosition;
-import com.example.pizzaandsushi.ViewModels.MenuViewPattern;
+import com.example.pizzaandsushi.ViewModels.ViewPattern;
 
 public class MenuFragment extends Fragment {
-    private MenuViewPattern menuViewPattern;
+    private ViewPattern viewPattern;
     private RecyclerPosition adapter_position;
 
     public MenuFragment() {
@@ -29,7 +29,7 @@ public class MenuFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        menuViewPattern = new ViewModelProvider(this).get(MenuViewPattern.class);
+        viewPattern = new ViewModelProvider(this).get(ViewPattern.class);
     }
 
     @Override
@@ -41,12 +41,12 @@ public class MenuFragment extends Fragment {
             @Override
             public void OnClick(MenuField field, int position) {
                 adapter_position.ChangeIndex(position);
-                menuViewPattern.position.observe(getViewLifecycleOwner(), adapter_position::update);
+                viewPattern.position.observe(getViewLifecycleOwner(), adapter_position::update);
             }
         };
         RecyclerMenu adapter_menu = new RecyclerMenu(getContext(), ListenerMenu);
         ListMenu.setAdapter(adapter_menu);
-        menuViewPattern.menu.observe(getViewLifecycleOwner(), adapter_menu::update);
+        viewPattern.menu.observe(getViewLifecycleOwner(), adapter_menu::update);
 
         RecyclerView ListPosition = view.findViewById(R.id.RecyclerMenu);
         RecyclerPosition.OnClickListener ListenerPosition = new RecyclerPosition.OnClickListener() {
@@ -57,7 +57,7 @@ public class MenuFragment extends Fragment {
         };
         adapter_position = new RecyclerPosition(getContext(), ListenerPosition);
         ListPosition.setAdapter(adapter_position);
-        menuViewPattern.position.observe(getViewLifecycleOwner(), adapter_position::update);
+        viewPattern.position.observe(getViewLifecycleOwner(), adapter_position::update);
 
         ImageButton button1 = view.findViewById(R.id.Profile_icon_button);
         button1.setOnClickListener(v -> {
