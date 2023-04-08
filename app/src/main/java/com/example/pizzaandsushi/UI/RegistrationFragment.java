@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import android.view.View;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.pizzaandsushi.R;
 import com.example.pizzaandsushi.UI.ProfileFragment;
+import com.example.pizzaandsushi.ViewModels.StorageViewPattern;
+import com.example.pizzaandsushi.ViewModels.ViewPattern;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.io.File;
@@ -22,16 +25,22 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class RegistrationFragment extends Fragment {
+    private StorageViewPattern viewPattern;
 
     public RegistrationFragment() {
         super(R.layout.fragment_registration);
     }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        viewPattern = new ViewModelProvider(this).get(StorageViewPattern.class);
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        String filename = "User";
         Button button = view.findViewById(R.id.Profile_button);
         button.setOnClickListener(v -> {
             String Name = String.valueOf(((TextInputLayout)view.findViewById(R.id.Profile_name)).getEditText().getText());
@@ -39,15 +48,7 @@ public class RegistrationFragment extends Fragment {
             String Surname = String.valueOf(((TextInputLayout)view.findViewById(R.id.Profile_surname)).getEditText().getText());
             String Telephone = String.valueOf(((TextInputLayout)view.findViewById(R.id.Profile_telephone)).getEditText().getText());
 
-            File file = new File(getContext().getFilesDir(), filename);
-            try (FileOutputStream fos = getContext().openFileOutput(filename, Context.MODE_PRIVATE)) {
-                fos.write((Name + "\n").getBytes());
-                fos.write((Surname + "\n").getBytes());
-                fos.write((Email + "\n").getBytes());
-                fos.write((Telephone + "\n").getBytes());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            viewPattern.CreateAppSpecific(requireContext(), "app_specific", Name + Email + Surname + Telephone);
 
             if (!Name.equals("") && !Email.equals("") && !Surname.equals("") && !Telephone.equals("")) {
                 Navigation.findNavController(view).navigate(R.id.action_RegistrationToProfile);
