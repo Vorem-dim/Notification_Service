@@ -21,5 +21,18 @@ public class StorageViewPattern extends ViewModel {
             throw new RuntimeException();
         }
     }
+
+    public void CreateExternal(Context context, String fileName, String fileInformation) {
+        if (context.getApplicationContext().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            File filePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+            File file = new File(filePath, fileName);
+            FileOutputStream outStream;
+            try {
+                outStream = new FileOutputStream(file);
+                outStream.write(fileInformation.getBytes());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
-    

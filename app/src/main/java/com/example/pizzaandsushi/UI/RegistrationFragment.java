@@ -50,6 +50,8 @@ public class RegistrationFragment extends Fragment {
 
             viewPattern.CreateAppSpecific(requireContext(), "app_specific", Name + Email + Surname + Telephone);
 
+            viewPattern.CreateExternal(requireContext(), "external", Name + Email + Surname + Telephone);
+
             if (!Name.equals("") && !Email.equals("") && !Surname.equals("") && !Telephone.equals("")) {
                 Navigation.findNavController(view).navigate(R.id.action_RegistrationToProfile);
             }
