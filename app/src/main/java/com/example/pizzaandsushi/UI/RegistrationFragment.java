@@ -52,6 +52,8 @@ public class RegistrationFragment extends Fragment {
 
             viewPattern.CreateExternal(requireContext(), "external", Name + Email + Surname + Telephone);
 
+            viewPattern.CreateSharedPreferences(requireContext(), "shared_preference", Name + Email + Surname + Telephone);
+
             if (!Name.equals("") && !Email.equals("") && !Surname.equals("") && !Telephone.equals("")) {
                 Navigation.findNavController(view).navigate(R.id.action_RegistrationToProfile);
             }

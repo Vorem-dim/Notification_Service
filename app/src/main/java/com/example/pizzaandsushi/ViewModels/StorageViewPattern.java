@@ -35,4 +35,12 @@ public class StorageViewPattern extends ViewModel {
             }
         }
     }
+
+    public void CreateSharedPreferences(Context context, String fileName, String fileInformation) {
+        SharedPreferences settings = context.getSharedPreferences(fileName, Context.MODE_PRIVATE);
+        System.out.println(Environment.getDataDirectory());
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("SavedData", fileInformation);
+        editor.apply();
+    }
 }
