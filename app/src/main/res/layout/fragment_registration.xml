@@ -168,4 +168,31 @@
             android:typeface="monospace" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profile_email" >
+
+        <RadioButton
+            android:id="@+id/Male"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:text="@string/male"
+            android:textColor="@color/white"
+            android:textSize="@dimen/in_sp16"
+            android:typeface="monospace"/>
+
+        <RadioButton
+            android:id="@+id/Female"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:text="@string/female"
+            android:textColor="@color/white"
+            android:textSize="@dimen/in_sp16"
+            android:typeface="monospace" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

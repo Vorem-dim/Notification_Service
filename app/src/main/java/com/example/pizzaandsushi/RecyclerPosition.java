@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -58,7 +59,6 @@ public class RecyclerPosition extends RecyclerView.Adapter<RecyclerPosition.View
 
     @SuppressLint("NotifyDataSetChanged")
     public void update(ArrayList<ArrayList<PositionField>> position) {
-        this.positionField.clear();
         this.positionField = position.get(index);
         notifyDataSetChanged();
     }

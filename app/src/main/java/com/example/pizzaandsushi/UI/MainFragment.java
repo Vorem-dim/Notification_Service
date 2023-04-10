@@ -33,7 +33,7 @@ public class MainFragment extends Fragment {
         button_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_MainToRegistration);
+                Navigation.findNavController(view).navigate(R.id.action_MainToProfile);
             }
         });
 

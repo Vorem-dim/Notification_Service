@@ -13,8 +13,8 @@
             android:id="@+id/action_MainToMenu"
             app:destination="@+id/MenuFragment" />
         <action
-            android:id="@+id/action_MainToRegistration"
-            app:destination="@+id/RegistrationFragment" />
+            android:id="@+id/action_MainToProfile"
+            app:destination="@+id/ProfileFragment" />
         <action
             android:id="@+id/action_MainToBasket"
             app:destination="@+id/BasketFragment" />
@@ -29,8 +29,8 @@
             android:id="@+id/action_MenuToBasket"
             app:destination="@+id/BasketFragment" />
         <action
-            android:id="@+id/action_MenuToRegistration"
-            app:destination="@+id/RegistrationFragment" />
+            android:id="@+id/action_MenuToProfile"
+            app:destination="@+id/ProfileFragment" />
     </fragment>
 
     <fragment
@@ -42,8 +42,8 @@
             android:id="@+id/action_BasketToMenu"
             app:destination="@+id/MenuFragment" />
         <action
-            android:id="@+id/action_BasketToRegistration"
-            app:destination="@+id/RegistrationFragment" />
+            android:id="@+id/action_BasketToProfile"
+            app:destination="@+id/ProfileFragment" />
     </fragment>
 
     <fragment

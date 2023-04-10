@@ -13,9 +13,12 @@
     <string name="Phone">Телефон</string>
     <string name="Email">E-mail</string>
     <string name="Registration_button">Войти</string>
+    <string name="Registration_button1">Изменить</string>
     <string name="Empty_fields">Заполните все поля</string>
-    <!-- Profile -->
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
     <string name="Enter_profile">Вы вошли в профиль</string>
+    <string name="Edit_profile">Профиль был изменен</string>
     <!-- Menu -->
     <string name="japan_cuisine">Японская кухня</string>
     <string name="italian_cuisine">Итальянская кухня</string>

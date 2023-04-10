@@ -27,7 +27,7 @@ public class BasketFragment extends Fragment {
 
         ImageButton button2 = view.findViewById(R.id.Profile_icon_button);
         button2.setOnClickListener(v -> {
-            Navigation.findNavController(view).navigate(R.id.action_BasketToRegistration);
+            Navigation.findNavController(view).navigate(R.id.action_BasketToProfile);
         });
     }
 }

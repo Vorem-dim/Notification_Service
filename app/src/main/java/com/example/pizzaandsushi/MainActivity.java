@@ -3,8 +3,6 @@ package com.example.pizzaandsushi;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.pizzaandsushi.UI.MainFragment;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override

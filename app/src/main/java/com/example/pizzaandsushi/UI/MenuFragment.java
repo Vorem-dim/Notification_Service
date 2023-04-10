@@ -61,7 +61,7 @@ public class MenuFragment extends Fragment {
 
         ImageButton button1 = view.findViewById(R.id.Profile_icon_button);
         button1.setOnClickListener(v -> {
-            Navigation.findNavController(view).navigate(R.id.action_MenuToRegistration);
+            Navigation.findNavController(view).navigate(R.id.action_MenuToProfile);
         });
 
         ImageButton button2 = view.findViewById(R.id.Basket_button);
