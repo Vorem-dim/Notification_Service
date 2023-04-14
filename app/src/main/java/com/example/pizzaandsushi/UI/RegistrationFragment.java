@@ -5,7 +5,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import android.view.View;
@@ -16,11 +15,9 @@ import android.widget.Toast;
 import com.example.pizzaandsushi.DataSource.Room.DataBase;
 import com.example.pizzaandsushi.DataSource.User;
 import com.example.pizzaandsushi.R;
-import com.example.pizzaandsushi.ViewModels.StorageViewPattern;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class RegistrationFragment extends Fragment {
-    private StorageViewPattern viewPattern;
     private boolean update = false;
     private DataBase database;
 
@@ -31,7 +28,6 @@ public class RegistrationFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewPattern = new ViewModelProvider(this).get(StorageViewPattern.class);
         database = DataBase.getInstance(getContext());
     }
 
@@ -59,10 +55,6 @@ public class RegistrationFragment extends Fragment {
                 Gender = "Male";
             else if (((RadioButton)view.findViewById(R.id.Female)).isChecked())
                 Gender = "Female";
-
-            viewPattern.CreateAppSpecific(requireContext(), "app_specific", Name + Email + Surname + Telephone);
-            viewPattern.CreateExternal(requireContext(), "external", Name + Email + Surname + Telephone);
-            viewPattern.CreateSharedPreferences(requireContext(), "shared_preference", Name + Email + Surname + Telephone);
 
             if (!Name.equals("") && !Email.equals("") && !Surname.equals("") && !Telephone.equals("")) {
                 if (update) {

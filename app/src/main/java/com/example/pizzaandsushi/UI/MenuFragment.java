@@ -30,6 +30,7 @@ public class MenuFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewPattern = new ViewModelProvider(this).get(ViewPattern.class);
+        viewPattern.initViewPattern(getContext());
     }
 
     @Override
