@@ -34,7 +34,7 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        /*
         database.userDao().getUsers().observe(getViewLifecycleOwner(), new Observer<List<User>>() {
             @Override
             public void onChanged(List<User> users) {
@@ -55,7 +55,7 @@ public class ProfileFragment extends Fragment {
                 }
             }
         });
-
+        */
         ImageButton button1 = view.findViewById(R.id.Menu_button);
         button1.setOnClickListener(v -> {
             Navigation.findNavController(view).navigate(R.id.action_ProfileToMenu);
