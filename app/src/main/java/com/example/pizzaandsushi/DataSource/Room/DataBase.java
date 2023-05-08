@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 
 import com.example.pizzaandsushi.DataSource.User;
 
-@Database (entities = {User.class}, version = 4)
+@Database (entities = {User.class}, version = 5)
 public abstract class DataBase extends RoomDatabase {
     private static final String DataBase_name = "user_info";
     private static DataBase instance;

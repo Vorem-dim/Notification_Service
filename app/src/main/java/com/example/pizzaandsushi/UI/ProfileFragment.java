@@ -10,16 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import com.example.pizzaandsushi.DataSource.Room.DataBase;
 import com.example.pizzaandsushi.DataSource.User;
 import com.example.pizzaandsushi.R;
+import com.example.pizzaandsushi.ViewModels.ViewPatternUser;
 
 import java.util.List;
 
 public class ProfileFragment extends Fragment {
-    private DataBase database;
+    private ViewPatternUser viewPattern;
 
     public ProfileFragment() {
         super(R.layout.fragment_profile);
@@ -28,7 +30,7 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        database = DataBase.getInstance(getContext());
+        viewPattern = new ViewModelProvider(this).get(ViewPatternUser.class);
     }
 
     @Override
@@ -56,6 +58,26 @@ public class ProfileFragment extends Fragment {
             }
         });
         */
+        viewPattern.users.observe(getViewLifecycleOwner(), new Observer<List<User>>() {
+            @Override
+            public void onChanged(List<User> users) {
+                if (users != null && users.size() > 0) {
+                    for (User user : users) {
+                        ((TextView)view.findViewById(R.id.NameProfile)).setText(user.getName());
+                        ((TextView)view.findViewById(R.id.SurnameProfile)).setText(user.getSurname());
+                        ((TextView)view.findViewById(R.id.TelephoneProfile)).setText(user.getTelephone());
+                        ((TextView)view.findViewById(R.id.EmailProfile)).setText(user.getEmail());
+                        if (user.getGender().equals("Male"))
+                            ((ImageView)view.findViewById(R.id.Avatar)).setImageResource(R.mipmap.profile_man);
+                        else if (user.getGender().equals("Female"))
+                            ((ImageView)view.findViewById(R.id.Avatar)).setImageResource(R.mipmap.profile_woman);
+                    }
+                }
+                else {
+                    Navigation.findNavController(view).navigate(R.id.action_ProfileToRegistration);
+                }
+            }
+        });
         ImageButton button1 = view.findViewById(R.id.Menu_button);
         button1.setOnClickListener(v -> {
             Navigation.findNavController(view).navigate(R.id.action_ProfileToMenu);

@@ -19,7 +19,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class RegistrationFragment extends Fragment {
     private boolean update = false;
-    private DataBase database;
+    //private DataBase database;
 
     public RegistrationFragment() {
         super(R.layout.fragment_registration);
@@ -28,7 +28,7 @@ public class RegistrationFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        database = DataBase.getInstance(getContext());
+        //database = DataBase.getInstance(getContext());
     }
 
     @Override
@@ -59,11 +59,11 @@ public class RegistrationFragment extends Fragment {
             if (!Name.equals("") && !Email.equals("") && !Surname.equals("") && !Telephone.equals("")) {
                 if (update) {
                     Toast.makeText(getContext(), R.string.Edit_profile, Toast.LENGTH_LONG).show();
-                    database.userDao().updateUser(Name, Surname, Telephone, Email, Gender);
+                    //database.userDao().updateUser(Name, Surname, Telephone, Email, Gender);
                 }
                 else {
                     Toast.makeText(getContext(), R.string.Enter_profile, Toast.LENGTH_LONG).show();
-                    database.userDao().insertUser(new User(Name, Surname, Telephone, Email, Gender));
+                    //database.userDao().insertUser(new User(Name, Surname, Telephone, Email, Gender));
                 }
                 Navigation.findNavController(view).navigate(R.id.action_RegistrationToProfile);
             }

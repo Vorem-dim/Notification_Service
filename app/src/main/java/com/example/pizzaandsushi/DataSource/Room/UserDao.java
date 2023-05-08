@@ -14,7 +14,7 @@ import java.util.List;
 @Dao
 public interface UserDao {
     @Query("SELECT * FROM users")
-    LiveData<User> getUsers();
+    LiveData<List<User>> getUsers();
 
     @Query("UPDATE users SET name=:name, surname=:surname, telephone=:telephone, gender=:gender, email=:email")
     void updateUser(String name, String surname, String telephone, String email, String gender);
