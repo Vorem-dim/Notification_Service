@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
-    <background android:drawable="@color/green_salad_with_edamame_and_mozzarella_background"/>
-    <foreground android:drawable="@mipmap/green_salad_with_edamame_and_mozzarella_foreground"/>
-</adaptive-icon>

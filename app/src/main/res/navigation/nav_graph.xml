@@ -18,10 +18,18 @@
             app:popExitAnim="@anim/fade_back" />
         <action
             android:id="@+id/action_MainToProfile"
-            app:destination="@+id/ProfileFragment" />
+            app:destination="@+id/ProfileFragment"
+            app:enterAnim="@anim/rise_forward"
+            app:exitAnim="@anim/fade_forward"
+            app:popEnterAnim="@anim/rise_back"
+            app:popExitAnim="@anim/fade_back"/>
         <action
             android:id="@+id/action_MainToBasket"
-            app:destination="@+id/BasketFragment" />
+            app:destination="@+id/BasketFragment"
+            app:enterAnim="@anim/rise_forward"
+            app:exitAnim="@anim/fade_forward"
+            app:popEnterAnim="@anim/rise_back"
+            app:popExitAnim="@anim/fade_back"/>
     </fragment>
 
     <fragment
@@ -31,10 +39,18 @@
         tools:layout="@layout/fragment_menu">
         <action
             android:id="@+id/action_MenuToBasket"
-            app:destination="@+id/BasketFragment" />
+            app:destination="@+id/BasketFragment"
+            app:enterAnim="@anim/rise_forward"
+            app:exitAnim="@anim/fade_forward"
+            app:popEnterAnim="@anim/rise_back"
+            app:popExitAnim="@anim/fade_back"/>
         <action
             android:id="@+id/action_MenuToProfile"
-            app:destination="@+id/ProfileFragment" />
+            app:destination="@+id/ProfileFragment"
+            app:enterAnim="@anim/rise_forward"
+            app:exitAnim="@anim/fade_forward"
+            app:popEnterAnim="@anim/rise_back"
+            app:popExitAnim="@anim/fade_back"/>
     </fragment>
 
     <fragment
@@ -44,10 +60,18 @@
         tools:layout="@layout/fragment_basket">
         <action
             android:id="@+id/action_BasketToMenu"
-            app:destination="@+id/MenuFragment" />
+            app:destination="@+id/MenuFragment"
+            app:enterAnim="@anim/rise_forward"
+            app:exitAnim="@anim/fade_forward"
+            app:popEnterAnim="@anim/rise_back"
+            app:popExitAnim="@anim/fade_back"/>
         <action
             android:id="@+id/action_BasketToProfile"
-            app:destination="@+id/ProfileFragment" />
+            app:destination="@+id/ProfileFragment"
+            app:enterAnim="@anim/rise_forward"
+            app:exitAnim="@anim/fade_forward"
+            app:popEnterAnim="@anim/rise_back"
+            app:popExitAnim="@anim/fade_back"/>
     </fragment>
 
     <fragment
@@ -57,13 +81,25 @@
         tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_ProfileToMenu"
-            app:destination="@+id/MenuFragment" />
+            app:destination="@+id/MenuFragment"
+            app:enterAnim="@anim/rise_forward"
+            app:exitAnim="@anim/fade_forward"
+            app:popEnterAnim="@anim/rise_back"
+            app:popExitAnim="@anim/fade_back"/>
         <action
             android:id="@+id/action_ProfileToRegistration"
-            app:destination="@+id/RegistrationFragment" />
+            app:destination="@+id/RegistrationFragment"
+            app:enterAnim="@anim/rise_forward"
+            app:exitAnim="@anim/fade_forward"
+            app:popEnterAnim="@anim/rise_back"
+            app:popExitAnim="@anim/fade_back"/>
         <action
             android:id="@+id/action_ProfileToBasket"
-            app:destination="@+id/BasketFragment" />
+            app:destination="@+id/BasketFragment"
+            app:enterAnim="@anim/rise_forward"
+            app:exitAnim="@anim/fade_forward"
+            app:popEnterAnim="@anim/rise_back"
+            app:popExitAnim="@anim/fade_back"/>
     </fragment>
 
     <fragment
@@ -73,6 +109,10 @@
         tools:layout="@layout/fragment_registration">
         <action
             android:id="@+id/action_RegistrationToProfile"
-            app:destination="@+id/ProfileFragment" />
+            app:destination="@+id/ProfileFragment"
+            app:enterAnim="@anim/rise_forward"
+            app:exitAnim="@anim/fade_forward"
+            app:popEnterAnim="@anim/rise_back"
+            app:popExitAnim="@anim/fade_back"/>
     </fragment>
 </navigation>

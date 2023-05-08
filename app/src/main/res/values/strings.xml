@@ -1,7 +1,7 @@
 <resources>
     <!-- Main Screen -->
     <string name="app_name">Pizza and Sushi</string>
-    <string name="Info">Доставка суши и пиццы — онлайн сервис заказа суши и пиццы в Москве.</string>
+    <string name="Info">Доставка суши — онлайн сервис заказа суши и пиццы в Москве.</string>
     <string name="Time">Время приема заказов: с 9:00 до 23:00</string>
     <string name="Telephone">Телефон\n+7 (977) 927–83–40</string>
     <string name="Menu">Открыть меню</string>
@@ -20,8 +20,7 @@
     <string name="Enter_profile">Вы вошли в профиль</string>
     <string name="Edit_profile">Профиль был изменен</string>
     <!-- Menu -->
-    <string name="japan_cuisine">Японская кухня</string>
-    <string name="italian_cuisine">Итальянская кухня</string>
+    <string name="sushi">Суши и роллы</string>
     <string name="salad">Салаты</string>
     <string name="desserts">Десерты</string>
     <string name="drinks">Напитки</string>
@@ -82,8 +81,6 @@
     <string name="prime">Лосось, креветка темпура, огурец, тобико, рис, нори, 6 шт.</string>
     <string name="philadelphia_light">Лосось, сыр, авокадо, огурцы, кунжут, рис, нори, 6 шт.</string>
     <string name="philadelphia">Лосось, огурец, авокадо, кунжут, сыр, зеленый лук, рис, нори, 6 шт.</string>
-        <!-- Italian position -->
-
         <!-- Salad position -->
     <string name="Title_caesar_with_chicken">Цезарь с курицей</string>
     <string name="Title_caesar_with_shrimp">Цезарь с креветкой</string>
@@ -95,9 +92,6 @@
     <string name="Title_akarui">Акаруи</string>
     <string name="Title_nicoise">Нисуаз</string>
     <string name="Title_shinshiro">Синсиро</string>
-    <string name="Title_greek_salad">Греческий салат</string>
-    <string name="Title_green_salad_with_edamame_and_mozzarella">Салат с эдамаме и моцареллой</string>
-    <string name="Title_salmon_salad">Салат с лососем</string>
     <string name="caesar_with_chicken">Курица, сыр, салат романо, салат айсберг, перепелиное яйцо, гренки, соус «Цезарь»</string>
     <string name="caesar_with_shrimp">Креветки, сыр, салат романо, салат айсберг, перепелиное яйцо, гренки, соус «Цезарь»</string>
     <string name="chuka_with_nut_sauce">Чука, ореховый соус</string>
@@ -108,30 +102,21 @@
     <string name="akarui">Кукуруза, микс салатных листьев, болгарский перец, огурец, лук, кинза, пикантный соус, зеленое масло</string>
     <string name="nicoise">Тунец, мини-картофель, томаты, авокадо, салатный микс, огурцы, перепелиное яйцо, кунжут, соус «Нисуаз»</string>
     <string name="shinshiro">Кальмар, креветка, салатный микс, томаты черри, чипсы из пармезана, фирменная заправка, кунжут</string>
-    <string name="greek_salad">Спелые томаты, листья салата, сладкий перец, огурцы, красный лук, оливки и сыр фета. Заправляется оливковым маслом и бальзамиком</string>
-    <string name="green_salad_with_edamame_and_mozzarella">Свежий шпинат, бобы эдамаме, брокколи, кабачки, огурцы и моцарелла под соусом из маракуйи</string>
-    <string name="salmon_salad">Салат с подкопчённым лососем, руколой, свежими огурцами, творожным сыром с капелькой трюфельного масла и соусом из маракуйи</string>
         <!-- Dessert position -->
     <string name="Title_fruit_roll">Фруктовый ролл</string>
     <string name="Title_chocolate_roll">Шоколадный ролл</string>
     <string name="Title_kuro_eru">Куро ёру</string>
     <string name="Title_manila_roll">Манила ролл</string>
     <string name="Title_roku_san">Року сан</string>
-    <string name="Title_amai_miru">Амаи миру</string>
-    <string name="Title_cheesecake">Чизкейк</string>
+    <string name="Title_amai_miru">Амаи миру</string>tiramisu
     <string name="Title_tiramisu">Тирамису</string>
-    <string name="Title_medovik">Медовик</string>
-    <string name="Title_red_velvet">Красный бархат</string>
     <string name="fruit_roll">Ананас, киви, сырный крем, малиновый соус, 4 шт.</string>
     <string name="chocolate_roll">Ананас, киви, клубника, банан, миндаль, сырный крем, шоколадный соус, 4 шт.</string>
     <string name="kuro_eru">Киви, ананас, клубника, банан, миндаль и сырный крем, 4 шт.</string>
     <string name="manila_roll">Ананас, киви, сырный крем и малиновый соус, 4 шт.</string>
     <string name="roku_san">Безе, сливочный крем, клубника, киви, ананас, пюре маракуйя и манго, миндаль, мята</string>
     <string name="amai_miru">Сыр маскарпоне, клубника, малина, мандарин, печенье и грецкий орех</string>
-    <string name="cheesecake">Классический творожный десерт на основе из песочного теста. Творожный сыр, яйцо, сахар, масло сливочное, мука</string>
-    <string name="tiramisu">Классический итальянский десерт. Кофейный бисквит, маскарпоне, сливки, печенье савоярди, пропитка из эспрессо и ликера амаретто, какао пудра</string>
-    <string name="medovik">Бисквитно-мёдовый торт, пропитанный сметанным кремом. Мёдовый бисквит, крем сметанный, вафельная крошка</string>
-    <string name="red_velvet">Бисквит из вишни с изюмом, пропитанный сливочный кремом. Вишневые коржи, крем сливочный (ваниль, сливки, сметана), изюм</string>
+    <string name="tiramisu">сыр маскарпоне, бисквитное печенье савоярди</string>
         <!-- Drinks position -->
 
 </resources>

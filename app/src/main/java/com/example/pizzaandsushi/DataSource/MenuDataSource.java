@@ -16,10 +16,9 @@ public class MenuDataSource {
     public static LiveData<List<MenuField>> setInitialDataMenu(Context context) {
         MutableLiveData<List<MenuField>> result = new MutableLiveData<>();
         ArrayList<MenuField> menu = new ArrayList<>();
-        menu.add(new MenuField(context.getString(R.string.japan_cuisine), R.mipmap.japan_cuisine_foreground));
-        menu.add(new MenuField(context.getString(R.string.italian_cuisine), R.mipmap.italian_cuisine_foreground));
-        menu.add(new MenuField(context.getString(R.string.salad), R.mipmap.salat_foreground));
-        menu.add(new MenuField(context.getString(R.string.desserts), R.mipmap.desserts_foreground));
+        menu.add(new MenuField(context.getString(R.string.sushi), R.mipmap.sushi_foreground));
+        menu.add(new MenuField(context.getString(R.string.salad), R.mipmap.kumotori_foreground));
+        menu.add(new MenuField(context.getString(R.string.desserts), R.mipmap.tiramisu_foreground));
         menu.add(new MenuField(context.getString(R.string.drinks), R.mipmap.drinks_foreground));
         result.setValue(menu);
         return result;
@@ -28,8 +27,7 @@ public class MenuDataSource {
     public static LiveData<ArrayList<ArrayList<PositionField>>> setInitialDataPosition(Context context) {
         MutableLiveData<ArrayList<ArrayList<PositionField>>> result = new MutableLiveData<>();
         ArrayList<ArrayList<PositionField>> position = new ArrayList<>();
-        position.add(Japan(context));
-        position.add(Italian(context));
+        position.add(Sushi(context));
         position.add(Salad(context));
         position.add(Desserts(context));
         position.add(Drinks(context));
@@ -37,7 +35,7 @@ public class MenuDataSource {
         return result;
     }
 
-    private static ArrayList<PositionField> Japan(Context context) {
+    private static ArrayList<PositionField> Sushi(Context context) {
         ArrayList<PositionField> field = new ArrayList<>();
         field.add(new PositionField(context.getString(R.string.california_salmon_light), R.mipmap.california__salmon_light_foreground, context.getString(R.string.Title_california_salmon_light)));
         field.add(new PositionField(context.getString(R.string.california_salmon), R.mipmap.california__salmon_foreground, context.getString(R.string.Title_california_salmon)));
@@ -76,12 +74,6 @@ public class MenuDataSource {
         return field;
     }
 
-    private static ArrayList<PositionField> Italian(Context context) {
-        ArrayList<PositionField> field = new ArrayList<>();
-        field.add(new PositionField("", R.mipmap.italian_cuisine_foreground, "Coming soon"));
-        return field;
-    }
-
     private static ArrayList<PositionField> Salad(Context context) {
         ArrayList<PositionField> field = new ArrayList<>();
         field.add(new PositionField(context.getString(R.string.caesar_with_chicken), R.mipmap.caesar_with_chicken_foreground, context.getString(R.string.Title_caesar_with_chicken)));
@@ -94,9 +86,6 @@ public class MenuDataSource {
         field.add(new PositionField(context.getString(R.string.akarui), R.mipmap.akarui_foreground, context.getString(R.string.Title_akarui)));
         field.add(new PositionField(context.getString(R.string.nicoise), R.mipmap.nicoise_foreground, context.getString(R.string.Title_nicoise)));
         field.add(new PositionField(context.getString(R.string.shinshiro), R.mipmap.shinshiro_foreground, context.getString(R.string.Title_shinshiro)));
-        field.add(new PositionField(context.getString(R.string.greek_salad), R.mipmap.greek_salad_foreground, context.getString(R.string.Title_greek_salad)));
-        field.add(new PositionField(context.getString(R.string.salmon_salad), R.mipmap.salmon_salad_foreground, context.getString(R.string.Title_salmon_salad)));
-        field.add(new PositionField(context.getString(R.string.green_salad_with_edamame_and_mozzarella), R.mipmap.green_salad_with_edamame_and_mozzarella_foreground, context.getString(R.string.Title_green_salad_with_edamame_and_mozzarella)));
         return field;
     }
 
@@ -108,10 +97,7 @@ public class MenuDataSource {
         field.add(new PositionField(context.getString(R.string.chocolate_roll), R.mipmap.chocolate_roll_foreground, context.getString(R.string.Title_chocolate_roll)));
         field.add(new PositionField(context.getString(R.string.roku_san), R.mipmap.roku_san_foreground, context.getString(R.string.Title_roku_san)));
         field.add(new PositionField(context.getString(R.string.amai_miru), R.mipmap.amai_miru_foreground, context.getString(R.string.Title_amai_miru)));
-        field.add(new PositionField(context.getString(R.string.cheesecake), R.mipmap.cheesecake_foreground, context.getString(R.string.Title_cheesecake)));
         field.add(new PositionField(context.getString(R.string.tiramisu), R.mipmap.tiramisu_foreground, context.getString(R.string.Title_tiramisu)));
-        field.add(new PositionField(context.getString(R.string.medovik), R.mipmap.medovik_foreground, context.getString(R.string.Title_medovik)));
-        field.add(new PositionField(context.getString(R.string.red_velvet), R.mipmap.red_velvet_foreground, context.getString(R.string.Title_red_velvet)));
         return field;
     }
 
