@@ -21,6 +21,7 @@ import com.example.pizzaandsushi.RetrofitFactory;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -37,14 +38,17 @@ public class BasketFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        TextView text1 = view.findViewById(R.id.textView), text2 = view.findViewById(R.id.textView1);
+
         GetData data = new GetData();
         try {
-            data.setDataApi();
+            data.setDataApi(getContext());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        data.getDataFromApi1();
-        data.getDataFromApi2();
+
+        data.getDataFromApi1(getContext());
+        data.getDataFromApi2(getContext());
 
         ImageButton button1 = view.findViewById(R.id.Menu_button);
         button1.setOnClickListener(v -> {
